@@ -1,16 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-password',
   templateUrl: './password.component.html',
   styleUrls: ['./password.component.css'],
 })
-export class PasswordComponent implements OnInit {
-  password = new FormControl('', [
-    Validators.required,
-    Validators.minLength(8),
-  ]);
+export class PasswordComponent {
+  password: string;
+  weight: number = 0;
 
-  ngOnInit() {}
+  inputHandler(value: string) {}
 }
